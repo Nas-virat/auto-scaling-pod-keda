@@ -8,12 +8,44 @@ We will use nginx-deployment as image for this deployment and scaling pod base o
 
 Kuberenete Even Driven Autoscaling (KEDA) is a open source project that 
 help your scaling workload base on event that trigger such as CPU, Memory, Kafka,
-Promtheus metric and etc.
+Promtheus metric and etc. 
+
 
 ## Tools
 
 - minikube
 - kubectl
 
+## Tutorial 
+
+### 1. Start Kubernetes Cluster using Minikube
+
+```
+minikube start
+```
+
+### 2. Install KEDA
+
+```
+kubectl apply --server-side -f https://github.com/kedacore/keda/releases/download/v2.13.0/keda-2.13.0.yaml
+```
+
+### 3. Deploy Nginx Deployment
+
+```
+kubectl apply -f nginx-deployment.yaml
+```
+
+To check the deployment has been created, run the following command
+
+```
+kubectl get deployment
+```
+
+Let check the pod has been created
+
+```
+kubectl get pod
+```
 
 
