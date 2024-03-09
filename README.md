@@ -9,7 +9,7 @@ We will use nginx-deployment as image for this deployment and scaling pod base o
 Kuberenete Even Driven Autoscaling (KEDA) is a open source project that 
 help your scaling workload base on event that trigger such as CPU, Memory, Kafka,
 Promtheus metric and etc. 
-
+for more information about KEDA, please visit [KEDA](https://keda.sh/)
 
 ## Tools
 
@@ -52,6 +52,22 @@ Let check the pod has been created
 
 ```
 kubectl get pod
+```
+
+### 4. Deploy ScaledObject
+
+ScaledObject is a custom resource that is used to define the scaling rules for a deployment.
+
+
+```
+kubectl apply -f scaledobject.yaml
+```
+
+To check the ScaledObject has been created, run the following command
+
+```
+
+kubectl get scaledobject
 ```
 
 
