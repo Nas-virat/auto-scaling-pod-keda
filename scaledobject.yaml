@@ -15,4 +15,4 @@ spec:
       timezone: Asia/Bangkok  
       start: 30 * * * *       
       end: 45 * * * *         
-      desiredReplicas: "10"
+      desiredReplicas: "3"
